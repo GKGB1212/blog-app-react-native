@@ -5,11 +5,10 @@ import { createStackNavigator } from '@react-navigation/stack';
 import IndexScreen from './src/screens/IndexScreen';
 import ShowScreen from './src/screens/ShowScreen';
 import CreateScreen from './src/screens/CreateScreen';
+import EditScreen from './src/screens/EditScreen';
 
 import { Provider } from './src/context/BlogContext';
 
-import { Feather } from '@expo/vector-icons';
-import { TouchableOpacity } from 'react-native';
 
 const Stack = createStackNavigator();
 
@@ -33,6 +32,10 @@ function App() {
         <Stack.Screen
           name="CreateBlogPost"
           component={CreateScreen}
+        />
+        <Stack.Screen
+          name="Edit"
+          component={EditScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>
